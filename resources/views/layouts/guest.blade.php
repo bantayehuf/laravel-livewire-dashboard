@@ -16,12 +16,10 @@
     @vite(['resources/assets/scss/app.scss', 'resources/assets/js/app.js'])
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-gray-50 dark:bg-gray-800">
     <div class="font-sans text-gray-900 antialiased">
         {{ $slot }}
     </div>
-
-
 </body>
 
 </html>

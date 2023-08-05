@@ -46,14 +46,19 @@
         </ul>
         <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
             <li>
-                <a href="#"
-                    class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <span class="flex items-center">
+                <form method="POST" action="{{ route('logout') }}" x-data
+                    class="flex justify-between items-center text-sm dark:hover:text-white">
+                    @csrf
+
+                    <a href="{{ route('logout') }}" @click.prevent="$root.submit();"
+                        class="flex items-center w-full py-2 px-4  hover:bg-gray-100 dark:hover:bg-gray-600">
                         <i
                             class="fa-solid fa-arrow-right-from-bracket fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-                        Log out
-                    </span>
-                </a>
+
+
+                        {{ __('Logout') }}
+                    </a>
+                </form>
             </li>
         </ul>
     </div>

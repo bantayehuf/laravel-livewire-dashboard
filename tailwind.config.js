@@ -79,6 +79,9 @@ export default {
                     'Noto Color Emoji'
                 ]
             },
+            transitionProperty: {
+                'width': 'width'
+            },
         },
     },
 

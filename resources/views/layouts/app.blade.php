@@ -13,34 +13,27 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/assets/scss/app.scss', 'resources/assets/js/app.js'])
 
     <!-- Styles -->
     @livewireStyles
 </head>
 
-<body class="antialiased">
-    <x-banner />
+<body class="antialiased bg-gray-50 dark:bg-gray-800">
+    <x-layout.navbar />
 
-    <div class="min-h-screen bg-gray-100">
-        @livewire('navigation-menu')
+    <x-layout.sidebar />
 
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
+    <div x-data>
 
-        <!-- Page Content -->
-        <main>
+        <main :class="$store.showSidebar.on ? 'lg:ml-64' : 'lg:ml-0'" x-transition.duration.500ms
+            class="p-4 lg:ml-0 h-auto pt-20">
             {{ $slot }}
         </main>
+
     </div>
 
-    @stack('modals')
+    {{-- @stack('modals') --}}
 
     @livewireScripts
 </body>
