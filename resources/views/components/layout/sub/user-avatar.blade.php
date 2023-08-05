@@ -24,11 +24,11 @@
         </div>
         <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
             <li>
-                <a href="#"
+                <a href="{{ route('profile.show') }}"
                     class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                     <span class="flex items-center">
-                        <i class="fa-regular fa-user fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-                        My Profile
+                        <i class="fa fa-user fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
+                        {{ _('My Profile') }}
                     </span>
                     <i class="fa-solid fa-chevron-right fa-sm mx-2 text-gray-400"></i>
                 </a>
@@ -38,7 +38,7 @@
                     class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                     <span class="flex items-center">
                         <i class="fa-solid fa-gear  fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-                        Settings
+                        {{ _('Settings') }}
                     </span>
                     <i class="fa-solid fa-chevron-right fa-sm mx-2 text-gray-400"></i>
                 </a>
@@ -51,10 +51,9 @@
                     @csrf
 
                     <a href="{{ route('logout') }}" @click.prevent="$root.submit();"
-                        class="flex items-center w-full py-2 px-4  hover:bg-gray-100 dark:hover:bg-gray-600">
+                        class="flex items-center w-full py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600">
                         <i
                             class="fa-solid fa-arrow-right-from-bracket fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-
 
                         {{ __('Logout') }}
                     </a>
