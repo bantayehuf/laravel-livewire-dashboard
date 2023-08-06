@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900">
         <!-- Card -->
-        <div class="w-full border-t-4 border-primary-500 max-w-xl bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div class="w-full border-t-4 border-t-primary-500 max-w-xl bg-white rounded-lg shadow-md dark:bg-gray-800">
 
             <div class="border-b px-4 py-6">
                 <a href="/" class="flex items-center justify-center text-2xl font-semibold dark:text-white">

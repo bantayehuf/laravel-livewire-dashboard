@@ -4,12 +4,8 @@
 
         <span class="sr-only">Open user menu</span>
 
-        <div class="relative w-9 h-9 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 ring-2 ring-gray-300">
-            <svg class="absolute w-11 h-11 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
-                </path>
-            </svg>
+        <div class="relative overflow-hidden bg-gray-100 rounded-full ring-2 ring-gray-300 dark:bg-gray-600">
+            <img class="w-9 h-9 p-0.5 rounded-full" src="/static/images/avatar.png" alt="Bordered avatar">
         </div>
 
         <i class="fa-solid fa-chevron-down fa-md ml-2 text-gray-400 dark:text-white"></i>
