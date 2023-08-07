@@ -6,7 +6,11 @@
 
         <div class="flex items-center bg-gray-100 px-5 pt-3 pb-2 border-b border-gray-200 lg:hidden">
             <h5 id="drawer-navigation-label"
-                class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400 mr-auto">Menu
+                class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400 mr-auto">
+                <a href="https://flowbite.com" class="flex items-center justify-between">
+                    <img src="/static/images/logo.png" class="mr-3" alt="Flowbite Logo" />
+                    <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">AB Company</span>
+                </a>
             </h5>
             <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
                 class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absollute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
