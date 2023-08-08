@@ -22,7 +22,26 @@
             {{ __('Changed successfully.') }}
         </x-action-message>
 
-        <x-inputs.button-primary class="w--auto mt-4" wire:loading.attr="disabled">
+        @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) &&
+                !$this->user->hasVerifiedEmail())
+            <p class="text-sm mt-2">
+                {{ __('Your email address is unverified.') }}
+
+                <button type="button"
+                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    wire:click.prevent="sendEmailVerification">
+                    {{ __('Click here to re-send the verification email.') }}
+                </button>
+            </p>
+
+            @if ($this->verificationLinkSent)
+                <p class="mt-2 font-medium text-sm text-green-600">
+                    {{ __('A new verification link has been sent to your email address.') }}
+                </p>
+            @endif
+        @endif
+
+        <x-inputs.button-primary class="mt-4" wire:loading.attr="disabled">
             <i class="fa-solid fa-pen-to-square mr-2"></i>{{ _('Change') }}
         </x-inputs.button-primary>
     </form>
