@@ -56,20 +56,23 @@
             <div id="userProfileTabContent">
                 <div class="hidden px-6 py-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     @if (Laravel\Fortify\Features::canUpdateProfileInformation())
-                        @livewire('profile.update-profile-information-form')
+                        @livewire('auth.update-profile-information-form')
                     @endif
                 </div>
 
                 <div class="hidden px-6 py-5" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                     @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
                         <div class="mt-10 sm:mt-0">
-                            @livewire('profile.update-password-form')
+                            @livewire('auth.update-password-form')
+
                         </div>
 
                         <hr class="h-px w-full my-8 bg-gray-200 border-0 dark:bg-gray-700">
                     @endif
 
-                    @livewire('profile.logout-other-browser-sessions-form')
+                    {{-- @livewire('profile.logout-other-browser-sessions-form') --}}
+
+                    @livewire('auth.logout-other-browser-sessions-form')
                 </div>
             </div>
         </x-card>

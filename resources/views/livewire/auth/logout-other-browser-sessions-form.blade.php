@@ -43,9 +43,9 @@
             @endforeach
 
             <div class="mt-5">
-                <x-action-message on="loggedOut">
+                {{-- <x-action-message on="loggedOut">
                     {{ __('Removed successfully.') }}
-                </x-action-message>
+                </x-action-message> --}}
 
                 <div class="fd-lex align-items-center mt-4">
                     <x-inputs.button-danger class="btn btn-primary" wire:click="confirmLogout"
@@ -57,6 +57,7 @@
 
             <!-- Log Out Other Devices Confirmation Modal -->
             <x-modal.modal-dialog wire:model="confirmingLogout">
+                {{-- <x-modal.modal-dialog show="@entangle('confirmingLogout')"> --}}
                 <x-slot name="title">
                     {{ __('Log Out Other Browser Sessions') }}
                 </x-slot>

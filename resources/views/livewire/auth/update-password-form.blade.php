@@ -21,10 +21,6 @@
         <x-inputs.form-input type="password" id="password_confirmation" label="Confirm Password"
             placeholder="Enter current password" required extra="wire:model.defer='state.password_confirmation'" />
 
-        <x-action-message class="mt-3" on="saved">
-            {{ __('Changed successfully.') }}
-        </x-action-message>
-
         <x-inputs.button-primary class="w--auto mt-4" wire:loading.attr="disabled">
             <i class="fa-solid fa-pen-to-square mr-2"></i>{{ _('Change') }}
         </x-inputs.button-primary>

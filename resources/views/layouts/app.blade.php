@@ -33,9 +33,45 @@
 
     </div>
 
-    {{-- @stack('modals') --}}
+    @stack('modals')
 
-    @livewireScripts
+    <!--- Toast -->
+    <script src="/plugins/toast/toast.js"></script>
+
+    <script>
+        window.addEventListener('toast', event => {
+            switch (event.detail.type) {
+                case 'info':
+                    showNotification('info', 'Information', event.detail.message);
+                    break;
+                case 'success':
+                    showNotification('success', 'Success', event.detail.message);
+                    break;
+                case 'warning':
+                    showNotification('warning', 'Warning', event.detail.message);
+                    break;
+                case 'error':
+                    showNotification('error', 'Error', event.detail.message);
+                    break;
+            }
+        });
+
+        function showNotification(type, title, message) {
+            new Notify({
+                title: `${title}!`,
+                text: message,
+                showCloseButton: true,
+                showIcon: false,
+                customClass: `c-${type}`,
+                speed: 500, // animation speed
+                autoclose: true,
+                autotimeout: 5000
+            });
+        }
+    </script>
+
+
+    @livewireScriptConfig
 </body>
 
 </html>

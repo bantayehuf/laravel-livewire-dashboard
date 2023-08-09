@@ -1,9 +1,10 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import { Livewire, Alpine } from '../../../vendor/livewire/livewire/dist/livewire.esm.js';
 import focus from '@alpinejs/focus';
-window.Alpine = Alpine;
 
+
+window.Alpine = Alpine;
 
 document.addEventListener('alpine:init', () => {
     Alpine.store('showSidebar', {
@@ -17,5 +18,5 @@ document.addEventListener('alpine:init', () => {
 
 Alpine.plugin(focus);
 
-Alpine.start();
+Livewire.start()
 

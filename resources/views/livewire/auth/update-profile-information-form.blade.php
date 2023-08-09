@@ -18,10 +18,6 @@
         <x-inputs.form-input type="email" id="email" label="Email" placeholder="Enter your email" required
             extra="wire:model.defer='state.email'" />
 
-        <x-action-message class="mt-3" on="saved">
-            {{ __('Changed successfully.') }}
-        </x-action-message>
-
         @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) &&
                 !$this->user->hasVerifiedEmail())
             <p class="text-sm mt-2">
