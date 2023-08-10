@@ -1,6 +1,4 @@
 <div>
-    <x-global-spinner />
-
     <h4 class="text-lg font-medium text-gray-900">
         {{ __('Your profile Information') }}
     </h4>
@@ -37,8 +35,10 @@
             @endif
         @endif
 
-        <x-inputs.button-primary class="mt-4" wire:loading.attr="disabled">
-            <i class="fa-solid fa-pen-to-square mr-2"></i>{{ _('Change') }}
+        <x-inputs.button-primary class="mt-4" wire:loading.attr="disabled" wire:target="updateProfileInformation">
+            <i class="fa-solid fa-pen-to-square mr-2" wire:loading.class="fa-beat-fade"
+                wire:target="updateProfileInformation"></i>
+            {{ _('Change') }}
         </x-inputs.button-primary>
     </form>
 </div>

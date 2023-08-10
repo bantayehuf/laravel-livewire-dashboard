@@ -1,6 +1,4 @@
 <div>
-    <x-global-spinner />
-
     <h4 class="text-lg font-medium text-gray-900">
         {{ __('Manage Your Sessions') }}
     </h4>
@@ -43,13 +41,11 @@
             @endforeach
 
             <div class="mt-5">
-                {{-- <x-action-message on="loggedOut">
-                    {{ __('Removed successfully.') }}
-                </x-action-message> --}}
-
                 <div class="fd-lex align-items-center mt-4">
                     <x-inputs.button-danger class="btn btn-primary" wire:click="confirmLogout"
-                        wire:loading.attr="disabled">
+                        wire:loading.attr="disabled" wire:target="confirmLogout">
+                        <i class="fa-solid fa-arrow-right-from-bracket mr-2" wire:loading.class="fa-beat-fade"
+                            wire:target="confirmLogout"></i>
                         {{ __('Log Out Other Browser Sessions') }}
                     </x-inputs.button-danger>
                 </div>
@@ -81,7 +77,9 @@
                     </x-inputs.button-outlined>
 
                     <x-inputs.button-secondary class="ml-3" wire:click="logoutOtherBrowserSessions"
-                        wire:loading.attr="disabled">
+                        wire:loading.attr="disabled" wire:target="logoutOtherBrowserSessions">
+                        <i class="fa-solid fa-arrow-right-from-bracket mr-2" wire:loading.class="fa-beat-fade"
+                            wire:target="logoutOtherBrowserSessions"></i>
                         {{ __('Log Out Other Browser Sessions') }}
                     </x-inputs.button-secondary>
                 </x-slot>
