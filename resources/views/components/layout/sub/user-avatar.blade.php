@@ -24,7 +24,7 @@
                     class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                     <span class="flex items-center">
                         <i class="fa fa-user fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-                        {{ _('My Profile') }}
+                        {{ __('My Profile') }}
                     </span>
                     <i class="fa-solid fa-chevron-right fa-sm mx-2 text-gray-400"></i>
                 </a>
@@ -34,7 +34,7 @@
                     class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                     <span class="flex items-center">
                         <i class="fa-solid fa-gear  fa-lg mr-2 text-primary-600 dark:text-primary-500"></i>
-                        {{ _('Settings') }}
+                        {{ __('Settings') }}
                     </span>
                     <i class="fa-solid fa-chevron-right fa-sm mx-2 text-gray-400"></i>
                 </a>

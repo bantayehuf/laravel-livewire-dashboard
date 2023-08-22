@@ -31,7 +31,7 @@
                         placeholder="Confirm your password" required />
 
                     <x-inputs.button-primary class="w-full mt-5" wire:loading.attr="disabled">
-                        <i class="fa-solid fa-power-off mr-2"></i>{{ _('Reset Password') }}
+                        <i class="fa-solid fa-power-off mr-2"></i>{{ __('Reset Password') }}
                     </x-inputs.button-primary>
 
                     <div class="mt-4  flex justify-center">

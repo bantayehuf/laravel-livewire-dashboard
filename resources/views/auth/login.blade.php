@@ -48,7 +48,7 @@
                     </div>
 
                     <x-inputs.button-primary class="w-full mt-8" wire:loading.attr="disabled">
-                        <i class="fa-solid fa-right-to-bracket mr-2"></i>{{ _('Login') }}
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i>{{ __('Login') }}
                     </x-inputs.button-primary>
 
                     <div class="mt-4  flex justify-center">

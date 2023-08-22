@@ -38,7 +38,7 @@
         <x-inputs.button-primary class="mt-4" wire:loading.attr="disabled" wire:target="updateProfileInformation">
             <i class="fa-solid fa-pen-to-square mr-2" wire:loading.class="fa-beat-fade"
                 wire:target="updateProfileInformation"></i>
-            {{ _('Change') }}
+            {{ __('Change') }}
         </x-inputs.button-primary>
     </form>
 </div>

@@ -28,30 +28,30 @@
             class="overflow-y-auto py-4 px-3 h-full bg-white dark:bg-gray-800">
             <ul class="space-y-2">
 
-                <x-layout.sub.sidebar-item label="{{ _('Dashboard') }}" icon="fa-solid fa-gauge"
+                <x-layout.sub.sidebar-item label="{{ __('Dashboard') }}" icon="fa-solid fa-gauge"
                     route="{{ route('dashboard') }}" />
 
-                <x-layout.sub.sidebar-collapse id="pages" label="{{ _('Pages') }}" icon="fa-solid fa-pager">
-                    <x-layout.sub.sidebar-collapse-item label="{{ _('Settings') }}" route="#" />
-                    <x-layout.sub.sidebar-collapse-item label="{{ _('Kanban') }}" route="#" />
-                    <x-layout.sub.sidebar-collapse-item label="{{ _('Calendar') }}" route="#" />
+                <x-layout.sub.sidebar-collapse id="pages" label="{{ __('Pages') }}" icon="fa-solid fa-pager">
+                    <x-layout.sub.sidebar-collapse-item label="{{ __('Settings') }}" route="#" />
+                    <x-layout.sub.sidebar-collapse-item label="{{ __('Kanban') }}" route="#" />
+                    <x-layout.sub.sidebar-collapse-item label="{{ __('Calendar') }}" route="#" />
                 </x-layout.sub.sidebar-collapse>
 
 
-                <x-layout.sub.sidebar-collapse id="sa" label="{{ _('Sales') }}"
+                <x-layout.sub.sidebar-collapse id="sa" label="{{ __('Sales') }}"
                     icon="fa-solid fa-pagerfa-solid fa-sack-dollar">
-                    <x-layout.sub.sidebar-collapse-item label="{{ _('Products') }}" route="#" />
-                    <x-layout.sub.sidebar-collapse-item label="{{ _('Billings') }}" route="#" />
+                    <x-layout.sub.sidebar-collapse-item label="{{ __('Products') }}" route="#" />
+                    <x-layout.sub.sidebar-collapse-item label="{{ __('Billings') }}" route="#" />
                 </x-layout.sub.sidebar-collapse>
             </ul>
 
             <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
 
-                <x-layout.sub.sidebar-item label="{{ _('Docs') }}" icon="fa-regular fa-file-word" route="#" />
+                <x-layout.sub.sidebar-item label="{{ __('Docs') }}" icon="fa-regular fa-file-word" route="#" />
 
-                <x-layout.sub.sidebar-item label="{{ _('Components') }}" icon="fa-solid fa-box" route="#" />
+                <x-layout.sub.sidebar-item label="{{ __('Components') }}" icon="fa-solid fa-box" route="#" />
 
-                <x-layout.sub.sidebar-item label="{{ _('Help') }}" icon="fa-solid fa-circle-question"
+                <x-layout.sub.sidebar-item label="{{ __('Help') }}" icon="fa-solid fa-circle-question"
                     route="#" />
             </ul>
         </div>
