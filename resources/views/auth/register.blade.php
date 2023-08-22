@@ -32,7 +32,7 @@
                         placeholder="Confirm your password" required />
 
                     <x-inputs.button-primary class="w-full mt-4" wire:loading.attr="disabled">
-                        <i class="fa-solid fa-plus mr-2"></i>{{ _('Create Account') }}
+                        <i class="fa-solid fa-plus mr-2"></i>{{ __('Create Account') }}
                     </x-inputs.button-primary>
 
                     <div class="mt-4  flex justify-center">
