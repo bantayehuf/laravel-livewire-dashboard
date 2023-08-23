@@ -8,7 +8,7 @@
         <i
             class="{{ $icon }} text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i>
 
-        <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ _($label) }}</span>
+        <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ __($label) }}</span>
 
         <svg aria-hidden="true" x-bind:class="expanded ? 'rotate-0' : 'rotate-90'"
             class="w-6 h-6 transition-transform duration-200 ease-in-out shrink-0" fill="currentColor" viewBox="0 0 20 20"

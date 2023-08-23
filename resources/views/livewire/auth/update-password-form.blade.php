@@ -21,7 +21,7 @@
 
         <x-inputs.button-primary class="w--auto mt-4" wire:loading.attr="disabled" wire:target="updatePassword">
             <i class="fa-solid fa-pen-to-square mr-2" wire:loading.class="fa-beat-fade"
-                wire:target="updatePassword"></i>{{ _('Change') }}
+                wire:target="updatePassword"></i>{{ __('Change') }}
         </x-inputs.button-primary>
     </form>
 </div>
